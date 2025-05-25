@@ -37,6 +37,38 @@
             content: "✔ ";
             color: green;
         }
+        a {
+            color: #0d47a1;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #0d47a1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .btn-download:hover {
+            background-color: #1565c0;
+        }
+        .profile-pic {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-pic img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
@@ -47,6 +79,9 @@
 </header>
 
 <section>
+    <div class="profile-pic">
+        <img src="foto-perfil.jpg" alt="Foto de Emerson">
+    </div>
     <h2>Sobre Mim</h2>
     <p>
         Sou estudante de Física na Universidade Federal Fluminense (UFF), com experiência prática em planejamento educacional e ensino personalizado.
@@ -88,10 +123,24 @@
 </section>
 
 <section>
+    <h2>Projetos</h2>
+    <ul>
+        <li><a href="https://github.com/emersonkruger01/seu-projeto " target="_blank">Projeto de Simulação de Movimento Uniforme</a></li>
+        <li><a href="material-calc.pdf" target="_blank">Material Didático de Cálculo</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Currículo</h2>
+    <p>Para saber mais sobre minha trajetória acadêmica e profissional, baixe meu currículo:</p>
+    <a href="curriculo.pdf" download class="btn-download">Baixar Currículo</a>
+</section>
+
+<section>
     <h2>Contato</h2>
     <p>Email: <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/seuperfil " target="_blank">linkedin.com/in/seuperfil</a></p>
-    <p>GitHub: <a href="https://github.com/seunome " target="_blank">github.com/seunome</a></p>
+    <p>GitHub: <a href="https://github.com/emersonkruger01 " target="_blank">github.com/emersonkruger01</a></p>
 </section>
 
 </body>
