@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e3f2fd;
+            background-color: #e3f2fd; /* Fundo claro */
             color: #2e2e2e;
             margin: 0;
             padding: 0;
@@ -61,26 +61,24 @@
         .btn-download:hover {
             background-color: #1565c0;
         }
-        .profile-pic {
-            text-align: center;
-            margin-bottom: 20px;
+
+        /* Estilo para foto + info lado a lado */
+        .profile-contact {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .contact-info {
+            max-width: 600px;
         }
         .profile-pic img {
             width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
+            height: auto;
+            border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-        blockquote {
-            background-color: #2e2e2e;
-            color: #ffffff;
-            padding: 10px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
 
-        /* Estilo para projetos em coluna */
+        /* Grid de projetos */
         .projetos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -111,7 +109,7 @@
             color: #1565c0;
         }
 
-        /* Estilo para física histórica */
+        /* Grid de físicos */
         .fisicos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -132,6 +130,11 @@
             font-size: 0.9rem;
             color: #555;
         }
+        .fisico-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -141,14 +144,31 @@
     <p>Estudante de Física</p>
 </header>
 
+<!-- Seção: Contato Profissional -->
 <section>
-    <div class="profile-pic">
-        <img src="calculo3_emerson.jpeg" alt="Foto de Emerson">
+    <div class="profile-contact">
+        <div class="profile-pic">
+            <img src="calculo3_goncalves.jpeg" alt="Foto de Emerson">
+        </div>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:emersonrkg@id.uff.br">emersonrkg@id.uff.br</a></p>
+            <p><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/seulink" target="_blank">Clique aqui</a></p>
+            <p><strong>Área de Interesse:</strong></p>
+            <ul>
+                <li>Física Teórica e Experimental</li>
+                <li>Ensino de Física e Matemática</li>
+                <li>Geometria Não Euclidiana e Aplicações em Física</li>
+                <li>Mecânica Quântica e Gravidade Modificada (f(R))</li>
+            </ul>
+        </div>
     </div>
+</section>
+
+<section>
     <h2>Sobre Mim</h2>
     <p>
         Sou estudante de Bacharelado em Física pela Universidade Federal Fluminense (UFF).
-        Acredito que, à medida que aprofundamos nosso conhecimento em física, ganhamos maior capacidade de explicar e ensinar com clareza, e é isso que me motiva diariamente.
+        Acredito que, à medida que aprofundamos nosso conhecimento em física, ganhamos maior capacidade de explicar e ensinar com clareza — e é isso que me motiva diariamente.
     </p>
     <p>
         “A física deve grande parte de seu sucesso como modelo de ciência natural ao fato de sua formulação empregar uma linguagem que é, ao mesmo tempo, muito poderosa: a matemática.” — Moysés Nussenzveig.
@@ -186,7 +206,7 @@
     Universidade Federal de Lavras (UFLA)</p>
 </section>
 
-<!-- Nova Seção: Projetos -->
+<!-- Seção: Projetos -->
 <section>
     <h2>Projetos</h2>
     <div class="projetos-grid">
@@ -208,13 +228,14 @@
     </div>
 </section>
 
-<!-- Nova Seção: Físicos que Me Inspiraram -->
+<!-- Seção: Físicos que me inspiram -->
 <section>
-    <h2>Contribuições Clássicas e Modernas à Física</h2>
+    <h2>Físicos que Me Inspiraram</h2>
     <div class="fisicos-grid">
+
         <!-- Galileu -->
         <div class="fisico-card">
-            <img src="galileu.jpg" alt="Galileu Galilei" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+            <img src="imagens/galileu.jpg" alt="Galileu Galilei">
             <h3>Galileu Galilei</h3>
             <p><strong>Século:</strong> XVI–XVII</p>
             <p>Pai do método experimental; descobriu leis da queda livre e confirmou o heliocentrismo com o telescópio.</p>
@@ -222,7 +243,7 @@
 
         <!-- Newton -->
         <div class="fisico-card">
-            <img src="newton.jpg" alt="Isaac Newton" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+            <img src="imagens/newton.jpg" alt="Isaac Newton">
             <h3>Isaac Newton</h3>
             <p><strong>Século:</strong> XVII–XVIII</p>
             <p>Formulou as Leis do Movimento e a Gravitação Universal; inventou o cálculo (junto de Leibniz).</p>
@@ -230,7 +251,7 @@
 
         <!-- Maxwell -->
         <div class="fisico-card">
-            <img src="maxwell.jpg" alt="James Clerk Maxwell" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+            <img src="imagens/maxwell.jpg" alt="James Clerk Maxwell">
             <h3>James Clerk Maxwell</h3>
             <p><strong>Século:</strong> XIX</p>
             <p>Unificou eletricidade, magnetismo e luz nas Equações de Maxwell, abrindo caminho para as telecomunicações.</p>
@@ -238,15 +259,15 @@
 
         <!-- Planck -->
         <div class="fisico-card">
-            <img src="planck.jpg" alt="Max Planck" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+            <img src="imagens/planck.jpg" alt="Max Planck">
             <h3>Max Planck</h3>
             <p><strong>Século:</strong> XIX–XX</p>
             <p>Introduziu o conceito de “quanta” de energia, ponto de partida da física quântica.</p>
         </div>
 
-        <!-- Marie Curie -->
+        <!-- Curie -->
         <div class="fisico-card">
-            <img src="curie.jpg" alt="Marie Curie" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+            <img src="imagens/curie.jpg" alt="Marie Curie">
             <h3>Marie Curie</h3>
             <p><strong>Século:</strong> XIX–XX</p>
             <p>Pioneira no estudo da radioatividade; descobriu o polônio e o rádio; única pessoa a ganhar dois Prêmios Nobel em áreas científicas diferentes (Física e Química).</p>
@@ -254,7 +275,7 @@
 
         <!-- Einstein -->
         <div class="fisico-card">
-            <img src="einstein.jpg" alt="Albert Einstein" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+            <img src="imagens/einstein.jpg" alt="Albert Einstein">
             <h3>Albert Einstein</h3>
             <p><strong>Século:</strong> XX</p>
             <p>Relatividade Especial (E = mc²) e Geral; explicou o efeito fotoelétrico, inaugurando a teoria dos fótons.</p>
@@ -262,7 +283,7 @@
 
         <!-- Bohr -->
         <div class="fisico-card">
-            <img src="bohr.jpg" alt="Niels Bohr" style="width: 100%; border-radius: 8px; margin-bottom: 10px;">
+            <img src="imagens/bohr.jpg" alt="Niels Bohr">
             <h3>Niels Bohr</h3>
             <p><strong>Século:</strong> XX</p>
             <p>Propôs o modelo atômico com órbitas quantizadas; ajudou a fundar a mecânica quântica e o princípio da complementaridade.</p>
@@ -270,15 +291,11 @@
     </div>
 </section>
 
+<!-- Seção: Currículo -->
 <section>
     <h2>Currículo</h2>
     <p>Para saber mais sobre minha trajetória acadêmica e profissional, baixe meu currículo:</p>
     <a href="curriculum_emerson.pdf" download class="btn-download">Baixar Currículo</a>
-</section>
-
-<section>
-    <h2>Contato</h2>
-    <p>Email: <a href="mailto:emersonrkg@id.uff.br">emersonrkg@id.uff.br</a></p>
 </section>
 
 </body>
