@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e3f2fd;
+            background-color: #e3f2fd; /* Fundo claro */
             color: #2e2e2e;
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
         header {
             background-color: #2e2e2e;
             color: white;
-            padding: 10px 20px; /* Altura reduzida */
+            padding: 10px 20px; /* Altura reduzida pela metade */
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
@@ -37,8 +37,7 @@
             padding-left: 0;
         }
         li::before {
-            content: "✔ ";
-            color: #4caf50;
+            content: ""; /* Remove o check verde */
         }
         a {
             color: #2e2e2e;
@@ -140,14 +139,21 @@
             border-radius: 8px;
             margin-bottom: 10px;
         }
+
+        blockquote {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Olá, sou o Emerson 👋</h1>
-    <p>"A física deve grande parte de seu sucesso como modelo de ciência natural ao fato de sua formulação empregar uma linguagem que é, ao mesmo tempo, muito poderosa: a matemática."</p>
-    <p style="font-style: italic; font-size: 0.9rem;">— Moysés Nussenzveig</p>
+    <!-- Apenas o nome aparece aqui -->
 </header>
 
 <!-- Seção: Contato Profissional -->
