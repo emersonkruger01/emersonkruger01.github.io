@@ -147,13 +147,27 @@
             margin: 20px 0;
             border-radius: 5px;
         }
+
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 768px) {
+            .profile-contact {
+                flex-direction: column;
+            }
+            .profile-pic {
+                text-align: center;
+                margin: 0 auto 20px;
+            }
+            .profile-pic img {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Olá, sou o Emerson 👋</h1>
-    <!-- Apenas o nome aparece aqui -->
 </header>
 
 <!-- Seção: Contato Profissional -->
@@ -172,8 +186,8 @@
         </div>
     </div>
 </section>
-</section>
 
+<!-- Seção: Experiência Profissional -->
 <section>
     <h2>Experiência Profissional</h2>
     <strong>Bolsista PIBID/CAPES – Física</strong><br/>
@@ -185,6 +199,7 @@
     </ul>
 </section>
 
+<!-- Seção: Formação Acadêmica -->
 <section>
     <h2>Formação Acadêmica</h2>
     <p><strong>Bacharelado em Física (em andamento)</strong><br/>
@@ -226,8 +241,7 @@
             <img src="galileu.jpg" alt="Galileu Galilei">
             <h3>Galileu Galilei</h3>
             <p><strong>Século:</strong> XVI–XVII</p>
-            <p>Reconhecido como um dos pioneiros do método experimental, formulou as leis da queda livre e, com o telescópio, forneceu evidências que reforçaram o modelo heliocêntrico.
-</p>
+            <p>Reconhecido como um dos pioneiros do método experimental, formulou as leis da queda livre e, com o telescópio, forneceu evidências que reforçaram o modelo heliocêntrico.</p>
         </div>
 
         <!-- Newton -->
@@ -235,7 +249,7 @@
             <img src="newton.jpg" alt="Isaac Newton">
             <h3>Isaac Newton</h3>
             <p><strong>Século:</strong> XVII–XVIII</p>
-            <p>Formulou as três Leis do Movimento e a Lei da Gravitação Universal, além de desenvolver, de forma independente, o cálculo diferencial, trabalho que, em paralelo, também foi realizado por Leibniz. </p>
+            <p>Formulou as três Leis do Movimento e a Lei da Gravitação Universal, além de desenvolver, de forma independente, o cálculo diferencial, trabalho que, em paralelo, também foi realizado por Leibniz.</p>
         </div>
 
         <!-- Maxwell -->
