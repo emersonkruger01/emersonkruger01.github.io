@@ -15,7 +15,7 @@
         header {
             background-color: #2e2e2e;
             color: white;
-            padding: 30px 20px;
+            padding: 15px 20px; /* Reduzindo a altura da faixa preta */
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
@@ -78,59 +78,31 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        /* Grid de projetos */
-        .projetos-grid {
+        /* Grid de contribuições */
+        .contribuicoes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
         }
-        .projeto-card {
+        .contribuicao-card {
             background-color: #fff;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             transition: transform 0.2s ease;
         }
-        .projeto-card:hover {
+        .contribuicao-card:hover {
             transform: translateY(-5px);
         }
-        .projeto-card h3 {
+        .contribuicao-card h3 {
             font-size: 1rem;
             margin: 0 0 10px 0;
         }
-        .projeto-card p {
+        .contribuicao-card p {
             font-size: 0.9rem;
             margin: 0;
         }
-        .projeto-card a {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #1565c0;
-        }
-
-        /* Grid de físicos */
-        .fisicos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .fisico-card {
-            background-color: #fff;
-            padding: 15px;
-            border-left: 5px solid #1565c0;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        .fisico-card h3 {
-            margin: 0 0 5px 0;
-            font-size: 1rem;
-        }
-        .fisico-card p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        .fisico-card img {
+        .contribuicao-card img {
             width: 100%;
             border-radius: 8px;
             margin-bottom: 10px;
@@ -152,38 +124,24 @@
         </div>
         <div class="contact-info">
             <p><strong>Email:</strong> <a href="mailto:emersonrkg@id.uff.br">emersonrkg@id.uff.br</a></p>
-            <p><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/seulink" target="_blank">Clique aqui</a></p>
+            <p><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/2794155346351456" target="_blank">Clique aqui</a></p>
             <p><strong>Área de Interesse:</strong></p>
-            <ul>
-                <li>Graduando em Física pela UFF, com foco nos fundamentos da Física de Partículas. Dedica-se ao estudo crítico das ideias de Maxwell, Newton e Einstein, além da análise de equações diferenciais ordinárias complexas. Valoriza a divulgação científica, transformando notação matemática densa em linguagem acessível para seminários, artigos e ações de extensão.
-</li>
-            </ul>
+            <p>
+                Graduando em Física pela UFF, com foco nos fundamentos da Física de Partículas. Dedica-se ao estudo crítico das ideias de Maxwell, Newton e Einstein, além da análise de equações diferenciais ordinárias complexas. Valoriza a divulgação científica, transformando notação matemática densa em linguagem acessível para seminários, artigos e ações de extensão.
+            </p>
         </div>
     </div>
 </section>
 
+<!-- Seção: Sobre Mim -->
 <section>
     <h2>Sobre Mim</h2>
-    <p>
-        Sou estudante de Bacharelado em Física pela Universidade Federal Fluminense (UFF).
-        Acredito que, à medida que aprofundamos nosso conhecimento em física, ganhamos maior capacidade de explicar e ensinar com clareza — e é isso que me motiva diariamente.
-    </p>
     <p>
         “A física deve grande parte de seu sucesso como modelo de ciência natural ao fato de sua formulação empregar uma linguagem que é, ao mesmo tempo, muito poderosa: a matemática.” — Moysés Nussenzveig.
     </p>
 </section>
 
-<section>
-    <h2>Habilidades</h2>
-    <ul>
-        <li>Cálculo I, II e III</li>
-        <li>Álgebra Linear e Geometria Analítica</li>
-        <li>Equações Diferenciais e Métodos Matemáticos</li>
-        <li>Elaboração de planos de estudo e materiais didáticos</li>
-        <li>Resolução detalhada de exercícios de Física e Matemática</li>
-    </ul>
-</section>
-
+<!-- Seção: Experiência Profissional -->
 <section>
     <h2>Experiência Profissional</h2>
     <strong>Bolsista PIBID/CAPES – Física</strong><br/>
@@ -195,6 +153,7 @@
     </ul>
 </section>
 
+<!-- Seção: Formação Acadêmica -->
 <section>
     <h2>Formação Acadêmica</h2>
     <p><strong>Bacharelado em Física (em andamento)</strong><br/>
@@ -213,7 +172,7 @@
             <h3>Investigação sobre a Geometria Euclidiana por meio do Quadrilátero de Saccheri</h3>
             <p><strong>Ano:</strong> 2024</p>
             <p>Exploração da história e fundamentos da geometria não euclidiana através do quadrilátero de Saccheri.</p>
-            <a href="geometria_emerson.pdf" target="_blank">Baixar Projeto</a>
+            <a href="geometria_emerson.pdf" target="_blank">Abrir no PDF</a>
         </div>
 
         <!-- Projeto 2 -->
@@ -221,18 +180,18 @@
             <h3>Defeitos topológicos em gravidades f(R): revisão crítica da literatura</h3>
             <p><strong>Ano:</strong> 2025</p>
             <p>Revisão crítica das teorias atuais sobre defeitos topológicos em modelos de gravitação modificada.</p>
-            <a href="defeitos_topologicos_gravitacao_revisao.pdf" target="_blank">Baixar Revisão</a>
+            <a href="defeitos_topologicos_gravitacao_revisao.pdf" target="_blank">Abrir no PDF</a>
         </div>
     </div>
 </section>
 
-<!-- Seção: Físicos que me inspiram -->
+<!-- Seção: Contribuições Clássicas e Modernas à Física -->
 <section>
-    <h2>Físicos que Me Inspiraram</h2>
-    <div class="fisicos-grid">
+    <h2>Contribuições Clássicas e Modernas à Física</h2>
+    <div class="contribuicoes-grid">
 
         <!-- Galileu -->
-        <div class="fisico-card">
+        <div class="contribuicao-card">
             <img src="galileu.jpg" alt="Galileu Galilei">
             <h3>Galileu Galilei</h3>
             <p><strong>Século:</strong> XVI–XVII</p>
@@ -240,7 +199,7 @@
         </div>
 
         <!-- Newton -->
-        <div class="fisico-card">
+        <div class="contribuicao-card">
             <img src="newton.jpg" alt="Isaac Newton">
             <h3>Isaac Newton</h3>
             <p><strong>Século:</strong> XVII–XVIII</p>
@@ -248,7 +207,7 @@
         </div>
 
         <!-- Maxwell -->
-        <div class="fisico-card">
+        <div class="contribuicao-card">
             <img src="maxwell.jpg" alt="James Clerk Maxwell">
             <h3>James Clerk Maxwell</h3>
             <p><strong>Século:</strong> XIX</p>
@@ -256,7 +215,7 @@
         </div>
 
         <!-- Planck -->
-        <div class="fisico-card">
+        <div class="contribuicao-card">
             <img src="planck.jpg" alt="Max Planck">
             <h3>Max Planck</h3>
             <p><strong>Século:</strong> XIX–XX</p>
@@ -264,7 +223,7 @@
         </div>
 
         <!-- Curie -->
-        <div class="fisico-card">
+        <div class="contribuicao-card">
             <img src="curie.jpg" alt="Marie Curie">
             <h3>Marie Curie</h3>
             <p><strong>Século:</strong> XIX–XX</p>
@@ -272,7 +231,7 @@
         </div>
 
         <!-- Einstein -->
-        <div class="fisico-card">
+        <div class="contribuicao-card">
             <img src="einstein.jpg" alt="Albert Einstein">
             <h3>Albert Einstein</h3>
             <p><strong>Século:</strong> XX</p>
@@ -280,7 +239,7 @@
         </div>
 
         <!-- Bohr -->
-        <div class="fisico-card">
+        <div class="contribuicao-card">
             <img src="bohr.jpg" alt="Niels Bohr">
             <h3>Niels Bohr</h3>
             <p><strong>Século:</strong> XX</p>
