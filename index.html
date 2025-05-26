@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e3f2fd; /* Fundo claro */
+            background-color: #e3f2fd;
             color: #2e2e2e;
             margin: 0;
             padding: 0;
@@ -79,6 +79,59 @@
             margin: 20px 0;
             border-radius: 5px;
         }
+
+        /* Estilo para projetos em coluna */
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .projeto-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .projeto-card:hover {
+            transform: translateY(-5px);
+        }
+        .projeto-card h3 {
+            font-size: 1rem;
+            margin: 0 0 10px 0;
+        }
+        .projeto-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .projeto-card a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #1565c0;
+        }
+
+        /* Estilo para física histórica */
+        .fisicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .fisico-card {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 5px solid #1565c0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .fisico-card h3 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+        }
+        .fisico-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -90,7 +143,7 @@
 
 <section>
     <div class="profile-pic">
-        <img src="calculo3_goncalves.jpeg" alt="Foto de Emerson">
+        <img src="calculo3_emerson.jpeg" alt="Foto de Emerson">
     </div>
     <h2>Sobre Mim</h2>
     <p>
@@ -98,8 +151,7 @@
         Acredito que, à medida que aprofundamos nosso conhecimento em física, ganhamos maior capacidade de explicar e ensinar com clareza, e é isso que me motiva diariamente.
     </p>
     <p>
-        “A física deve grande parte de seu sucesso como modelo de ciência natural ao fato de sua formulação empregar uma linguagem que é, ao mesmo tempo, muito poderosa: a matemática.” Moysés Nussenzveig.
-        <br>
+        “A física deve grande parte de seu sucesso como modelo de ciência natural ao fato de sua formulação empregar uma linguagem que é, ao mesmo tempo, muito poderosa: a matemática.” — Moysés Nussenzveig.
     </p>
 </section>
 
@@ -134,12 +186,61 @@
     Universidade Federal de Lavras (UFLA)</p>
 </section>
 
+<!-- Nova Seção: Projetos -->
 <section>
     <h2>Projetos</h2>
-    <ul>
-        <li><a href="geometria_emerson.pdf" target="_blank">Investigação sobre a Geometria Euclidiana por meio do Quadrilátero de Saccheri</a></li>
-        <li><a href="defeitos_topologicos_gravitacao_revisao.pdf" target="_blank">Defeitos topológicos em gravidades f(R): revisão crítica da literatura (2013–2025)</a></li>
-    </ul>
+    <div class="projetos-grid">
+        <!-- Projeto 1 -->
+        <div class="projeto-card">
+            <h3>Investigação sobre a Geometria Euclidiana por meio do Quadrilátero de Saccheri</h3>
+            <p><strong>Ano:</strong> 2024</p>
+            <p>Exploração da história e fundamentos da geometria não euclidiana através do quadrilátero de Saccheri.</p>
+            <a href="geometria_emerson.pdf" target="_blank">Baixar Projeto</a>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="projeto-card">
+            <h3>Defeitos topológicos em gravidades f(R): revisão crítica da literatura</h3>
+            <p><strong>Ano:</strong> 2025</p>
+            <p>Revisão crítica das teorias atuais sobre defeitos topológicos em modelos de gravitação modificada.</p>
+            <a href="defeitos_topologicos_gravitacao_revisao.pdf" target="_blank">Baixar Revisão</a>
+        </div>
+    </div>
+</section>
+
+<!-- Nova Seção: Físicos que me inspiram -->
+<section>
+    <h2>Desenvolvimentos Fundamentais: de Galileu a Bohr</h2>
+    <div class="fisicos-grid">
+        <div class="fisico-card">
+            <h3>Galileu Galilei</h3>
+            <p><strong>Século:</strong> XVI–XVII<br/> Pai do método experimental; descobriu leis da queda livre e confirmou o heliocentrismo com o telescópio.</p>
+        </div>
+        <div class="fisico-card">
+            <h3>Isaac Newton</h3>
+            <p><strong>Século:</strong> XVII–XVIII<br/> Formulou as Leis do Movimento e a Gravitação Universal; inventou o cálculo (junto de Leibniz).</p>
+        </div>
+        <div class="fisico-card">
+            <h3>James Clerk Maxwell</h3>
+            <p><strong>Século:</strong> XIX<br/> Unificou eletricidade, magnetismo e luz nas Equações de Maxwell, abrindo caminho para as telecomunicações.</p>
+        </div>
+        <div class="fisico-card">
+            <h3>Max Planck</h3>
+            <p><strong>Século:</strong> XIX–XX<br/> Introduziu o conceito de “quanta” de energia, ponto de partida da física quântica.</p>
+        </div>
+        <div class="fisico-card">
+            <h3>Marie Curie</h3>
+            <p><strong>Século:</strong> XIX–XX<br/> Pioneira no estudo da radioatividade; descobriu o polônio e o rádio; única pessoa a ganhar dois Prêmios Nobel em áreas científicas diferentes (Física e Química).</p>
+        </div>
+        <div class="fisico-card">
+            <h3>Albert Einstein</h3>
+            <p><strong>Século:</strong> XX<br/> Relatividade Especial (E = mc²) e Geral; explicou o efeito fotoelétrico, inaugurando a teoria dos fótons.</p>
+        </div>
+        <div class="fisico-card">
+            <h3>Niels Bohr</h3>
+            <p><strong>Século:</strong> XX<br/> Propôs o modelo atômico com órbitas quantizadas; ajudou a fundar a mecânica quântica e o princípio da complementaridade.</p>
+        </div>
+    </div>
 </section>
 
 <section>
