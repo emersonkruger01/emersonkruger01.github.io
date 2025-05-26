@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e3f2fd; /* Fundo claro */
+            background-color: #e3f2fd;
             color: #2e2e2e;
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
         header {
             background-color: #2e2e2e;
             color: white;
-            padding: 15px 20px; /* Reduzindo a altura da faixa preta */
+            padding: 10px 20px; /* Altura reduzida */
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
@@ -47,6 +47,7 @@
         a:hover {
             text-decoration: underline;
         }
+
         .btn-download {
             display: inline-block;
             background-color: #2e2e2e;
@@ -78,6 +79,37 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
+        /* Grid de projetos */
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .projeto-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .projeto-card:hover {
+            transform: translateY(-5px);
+        }
+        .projeto-card h3 {
+            font-size: 1rem;
+            margin: 0 0 10px 0;
+        }
+        .projeto-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .projeto-card a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #1565c0;
+        }
+
         /* Grid de contribuições */
         .contribuicoes-grid {
             display: grid;
@@ -95,12 +127,13 @@
             transform: translateY(-5px);
         }
         .contribuicao-card h3 {
+            margin: 0 0 5px 0;
             font-size: 1rem;
-            margin: 0 0 10px 0;
         }
         .contribuicao-card p {
-            font-size: 0.9rem;
             margin: 0;
+            font-size: 0.9rem;
+            color: #555;
         }
         .contribuicao-card img {
             width: 100%;
@@ -113,7 +146,8 @@
 
 <header>
     <h1>Olá, sou o Emerson 👋</h1>
-    <p>Estudante de Física</p>
+    <p>"A física deve grande parte de seu sucesso como modelo de ciência natural ao fato de sua formulação empregar uma linguagem que é, ao mesmo tempo, muito poderosa: a matemática."</p>
+    <p style="font-style: italic; font-size: 0.9rem;">— Moysés Nussenzveig</p>
 </header>
 
 <!-- Seção: Contato Profissional -->
@@ -141,7 +175,6 @@
     </p>
 </section>
 
-<!-- Seção: Experiência Profissional -->
 <section>
     <h2>Experiência Profissional</h2>
     <strong>Bolsista PIBID/CAPES – Física</strong><br/>
@@ -153,7 +186,6 @@
     </ul>
 </section>
 
-<!-- Seção: Formação Acadêmica -->
 <section>
     <h2>Formação Acadêmica</h2>
     <p><strong>Bacharelado em Física (em andamento)</strong><br/>
@@ -172,7 +204,7 @@
             <h3>Investigação sobre a Geometria Euclidiana por meio do Quadrilátero de Saccheri</h3>
             <p><strong>Ano:</strong> 2024</p>
             <p>Exploração da história e fundamentos da geometria não euclidiana através do quadrilátero de Saccheri.</p>
-            <a href="geometria_emerson.pdf" target="_blank">Abrir no PDF</a>
+            <a href="geometria_emerson.pdf" target="_blank">Abrir Projeto (PDF)</a>
         </div>
 
         <!-- Projeto 2 -->
@@ -180,7 +212,7 @@
             <h3>Defeitos topológicos em gravidades f(R): revisão crítica da literatura</h3>
             <p><strong>Ano:</strong> 2025</p>
             <p>Revisão crítica das teorias atuais sobre defeitos topológicos em modelos de gravitação modificada.</p>
-            <a href="defeitos_topologicos_gravitacao_revisao.pdf" target="_blank">Abrir no PDF</a>
+            <a href="defeitos_topologicos_gravitacao_revisao.pdf" target="_blank">Abrir Revisão (PDF)</a>
         </div>
     </div>
 </section>
