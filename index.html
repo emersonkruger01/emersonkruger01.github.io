@@ -1,59 +1,318 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Emerson R. K. Gonçalves · Portfólio Acadêmico</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Emerson - Portfólio</title>
 
-  <!-- === Meta para SEO/browser === -->
-  <meta name="description" content="Portfólio de Emerson Roberto Kruger Gonçalves: projetos, currículo Lattes e contribuições em Física.">
+    <!-- Meta Tags para WhatsApp e redes sociais -->
+    <meta property="og:title" content="Emerson - Portfólio Acadêmico">
+    <meta property="og:description" content="Portfólio acadêmico e profissional de Emerson Roberto Kruger Gonçalves, estudante de Bacharelado em Física pela UFF. Inclui projetos, currículo e contribuições científicas.">
+    <meta property="og:image" content="https://emersonkruger01.github.io/thumbnail.png ">
+    <meta property="og:url" content="https://emersonkruger01.github.io ">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portfólio - Emerson Kruger">
+    <meta property="og:locale" content="pt_BR">
 
-  <!-- === Open Graph (WhatsApp, Facebook, LinkedIn etc.) === -->
-  <meta property="og:locale"        content="pt_BR">
-  <meta property="og:type"          content="website">
-  <meta property="og:site_name"     content="Portfólio — Emerson R. K. Gonçalves">
-  <meta property="og:url"           content="https://erkgoncalves.github.io/">
-  <meta property="og:title"         content="Emerson R. K. Gonçalves · Pesquisa e Divulgação Científica">
-  <meta property="og:description"   content="Graduando em Física na UFF, com experiência em ensino, pesquisa e tradução de notação complexa em linguagem acessível.">
-  <meta property="og:image"         content="https://erkgoncalves.github.io/thumbnail.png">
-  <meta property="og:image:secure_url" content="https://erkgoncalves.github.io/thumbnail.png">
-  <meta property="og:image:type"    content="image/png">
-  <meta property="og:image:width"   content="1200">
-  <meta property="og:image:height"  content="630">
-  <meta property="og:image:alt"     content="Emerson R. K. Gonçalves — Portfólio Acadêmico e Profissional">
-  <link rel="image_src"            href="https://erkgoncalves.github.io/thumbnail.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Emerson - Portfólio Acadêmico">
+    <meta name="twitter:description" content="Portfólio acadêmico e profissional de Emerson Roberto Kruger Gonçalves, estudante de Física pela Universidade Federal Fluminense.">
+    <meta name="twitter:image" content="https://emersonkruger01.github.io/thumbnail.png ">
 
-  <!-- === Twitter Card === -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Emerson R. K. Gonçalves · Pesquisa e Divulgação Científica">
-  <meta name="twitter:description" content="Graduando em Física na UFF, com experiência em ensino, pesquisa e divulgação científica em linguagem clara.">
-  <meta name="twitter:image"       content="https://erkgoncalves.github.io/thumbnail.png">
-  <meta name="twitter:image:alt"   content="Emerson R. K. Gonçalves — Portfólio Acadêmico">
-
-  <!-- === CSS (separado ou interno) === -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd; /* Fundo claro */
+            color: #2e2e2e;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2e2e2e;
+            color: white;
+            padding: 05px 10px; /* Altura reduzida pela metade */
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #ffffffcc;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2e2e2e;
+            border-left: 5px solid #2e2e2e;
+            padding-left: 10px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li::before {
+            content: ""; /* Remove o check verde */
+        }
+        a {
+            color: #2e2e2e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #2e2e2e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-download:hover {
+            background-color: #1565c0;
+        }
+        /* Estilo para foto + info lado a lado */
+        .profile-contact {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .contact-info {
+            max-width: 600px;
+        }
+        .profile-pic img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        /* Grid de projetos */
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .projeto-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .projeto-card:hover {
+            transform: translateY(-5px);
+        }
+        .projeto-card h3 {
+            font-size: 1rem;
+            margin: 0 0 10px 0;
+        }
+        .projeto-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .projeto-card a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #1565c0;
+        }
+        /* Grid de contribuições */
+        .contribuicoes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .contribuicao-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .contribuicao-card:hover {
+            transform: translateY(-5px);
+        }
+        .contribuicao-card h3 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+        }
+        .contribuicao-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .contribuicao-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        blockquote {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        /* Responsividade para dispositivos móveis */
+        @media (max-width: 768px) {
+            .profile-contact {
+                flex-direction: column;
+            }
+            .profile-pic {
+                text-align: center;
+                margin: 0 auto 20px;
+            }
+            .profile-pic img {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Emerson R. K. Gonçalves · Pesquisa, Ensino e Divulgação Científica</h1>
-  </header>
 
-  <section>
+<header>
+    <h1>Emerson R. K. Gonçalves · Pesquisa, Ensino e Divulgação Científica
+
+</h1>
+</header>
+
+<!-- Seção: Contato Profissional -->
+<section>
     <div class="profile-contact">
-      <div class="profile-pic">
-        <img src="perfil1_emerson.png" alt="Foto de Emerson">
-      </div>
-      <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:emersonrkg@id.uff.br">emersonrkg@id.uff.br</a></p>
-        <p><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/2794155346351456" target="_blank">Clique aqui</a></p>
-        <p><strong>Área de Interesse:</strong> Estudo crítico das ideias de Maxwell, Newton e Einstein; divulgação científica em linguagem acessível.</p>
-      </div>
+        <div class="profile-pic">
+            <img src="perfil1_emerson.png" alt="Foto de Emerson">
+        </div>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:emersonrkg@id.uff.br">emersonrkg@id.uff.br</a></p>
+            <p><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/2794155346351456" target="_blank">Clique aqui</a></p>
+            <p><strong>Área de Interesse:</strong></p>
+            <p>
+                Dedica-se ao estudo crítico das ideias de Maxwell, Newton e Einstein, além da análise de equações diferenciais ordinárias complexas. Valoriza a divulgação científica, transformando notação matemática densa em linguagem acessível para seminários, artigos e ações de extensão.
+            </p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Adicione aqui as demais seções do seu site... -->
+<!-- Seção: Experiência Profissional -->
+<section>
+    <h2>Experiência Profissional</h2>
+    <strong>Bolsista PIBID/CAPES – Física</strong><br/>
+    <em>Universidade Federal de Lavras (UFLA) | junho de 2023 – abril de 2024</em>
+    <ul>
+        <li>Planejamento educacional</li>
+        <li>Desenvolvimento de planos de estudo</li>
+        <li>Organização e elaboração de materiais didáticos</li>
+    </ul>
+</section>
+
+<!-- Seção: Certificados -->
+<section>
+    <h2>Certificados</h2>
+    <p><strong>Certificado de Bolsista PIBID/CAPES</strong></p>
+    <p>
+        Participação como bolsista no Programa Institucional de Iniciação à Docência (PIBID), vinculado à CAPES, com carga horária de 368 horas realizadas entre junho de 2023 e abril de 2024.
+    </p>
+    <a href="https://drive.google.com/file/d/1i0WZOGrvn3vrxL4CMBfg6WEed-Jep9sk/view?usp=sharing " target="_blank" class="btn-download">Ver Certificado</a>
+</section>
+
+<!-- Seção: Formação Acadêmica -->
+<section>
+    <h2>Formação Acadêmica</h2>
+    <p><strong>Bacharelado em Física (em andamento)</strong><br/>
+    Universidade Federal Fluminense (UFF)</p>
+    <p><strong>Licenciatura Plena em Física (até o 6º período)</strong><br/>
+    Universidade Federal de Lavras (UFLA)</p>
+</section>
+
+<!-- Seção: Projetos -->
+<section>
+    <h2>Projetos</h2>
+    <div class="projetos-grid">
+        <!-- Projeto 1 -->
+        <div class="projeto-card">
+            <h3>Investigação sobre a Geometria Euclidiana por meio do Quadrilátero de Saccheri</h3>
+            <p><strong>Ano:</strong> 2024</p>
+            <p>Exploração da história e fundamentos da geometria não euclidiana através do quadrilátero de Saccheri.</p>
+            <a href="https://drive.google.com/file/d/1_4isqBk5vooXbzbzS3aAlDV05ow-1kCm/view?usp=sharing " target="_blank">Abrir Projeto (PDF)</a>
+        </div>
+        <!-- Projeto 2 -->
+        <div class="projeto-card">
+            <h3>Defeitos topológicos em gravidades f(R): revisão crítica da literatura</h3>
+            <p><strong>Ano:</strong> 2025</p>
+            <p>Revisão crítica das teorias atuais sobre defeitos topológicos em modelos de gravitação modificada.</p>
+            <a href="https://drive.google.com/file/d/1boe0XxHcp_MH1gJ0gIyrl6aH3x5wn1mh/view?usp=sharing " target="_blank">Abrir Revisão (PDF)</a>
+        </div>
+    </div>
+</section>
+
+<!-- Seção: Contribuições Clássicas e Modernas à Física -->
+<section>
+    <h2>Contribuições Clássicas e Modernas à Física</h2>
+    <div class="contribuicoes-grid">
+        <!-- Galileu -->
+        <div class="contribuicao-card">
+            <img src="galileu.jpg" alt="Galileu Galilei">
+            <h3>Galileu Galilei</h3>
+            <p><strong>Século:</strong> XVI–XVII</p>
+            <p>Reconhecido como um dos pioneiros do método experimental, formulou as leis da queda livre e, com o telescópio, forneceu evidências que reforçaram o modelo heliocêntrico.</p>
+        </div>
+        <!-- Newton -->
+        <div class="contribuicao-card">
+            <img src="newton.jpg" alt="Isaac Newton">
+            <h3>Isaac Newton</h3>
+            <p><strong>Século:</strong> XVII–XVIII</p>
+            <p>Formulou as três Leis do Movimento e a Lei da Gravitação Universal, além de desenvolver, de forma independente, o cálculo diferencial, trabalho que, em paralelo, também foi realizado por Leibniz.</p>
+        </div>
+        <!-- Maxwell -->
+        <div class="contribuicao-card">
+            <img src="maxwell.jpg" alt="James Clerk Maxwell">
+            <h3>James Clerk Maxwell</h3>
+            <p><strong>Século:</strong> XIX</p>
+            <p>Suas quatro equações unificaram eletricidade, magnetismo e luz, prevendo ondas eletromagnéticas que sustentam as telecomunicações modernas.</p>
+        </div>
+        <!-- Planck -->
+        <div class="contribuicao-card">
+            <img src="planck.jpg" alt="Max Planck">
+            <h3>Max Planck</h3>
+            <p><strong>Século:</strong> XIX–XX</p>
+            <p>Introduziu a hipótese dos quanta em 1900, fundamento da mecânica quântica, e recebeu o Nobel de Física em 1918.</p>
+        </div>
+        <!-- Curie -->
+        <div class="contribuicao-card">
+            <img src="curie.jpg" alt="Marie Curie">
+            <h3>Marie Curie</h3>
+            <p><strong>Século:</strong> XIX–XX</p>
+            <p>Pioneira no estudo da radioatividade; isolou polônio e rádio e foi a primeira pessoa a ganhar dois Prêmios Nobel (Física 1903, Química 1911).</p>
+        </div>
+        <!-- Einstein -->
+        <div class="contribuicao-card">
+            <img src="einstein.jpg" alt="Albert Einstein">
+            <h3>Albert Einstein</h3>
+            <p><strong>Século:</strong> XX</p>
+            <p>Desenvolveu as teorias da relatividade especial e geral, explicou o efeito fotoelétrico e recebeu o Nobel de Física de 1921.</p>
+        </div>
+        <!-- Bohr -->
+        <div class="contribuicao-card">
+            <img src="bohr.jpg" alt="Niels Bohr">
+            <h3>Niels Bohr</h3>
+            <p><strong>Século:</strong> XX</p>
+            <p>Propôs o modelo atômico quantizado que explicou as linhas espectrais do hidrogênio, formulou o princípio da complementaridade e recebeu o Nobel de Física de 1922.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Seção: Currículo -->
+<section>
+    <h2>Currículo</h2>
+    <p>Para saber mais sobre minha trajetória acadêmica e profissional, clique para abrir o currículo:</p>
+    <a href="https://drive.google.com/file/d/1rJvSnuUAroleNdY_u-3HKpnykaPPimlD/view?usp=sharing " target="_blank" class="btn-download">Abrir Currículo</a>
+</section>
 
 </body>
 </html>
